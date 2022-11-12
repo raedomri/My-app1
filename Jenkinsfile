@@ -13,6 +13,13 @@ pipeline{
                 }
 
             }
+      stage('install') {
+             steps{
+                script{
+                    sh " npm install @angular-devkit/build-angular:browser"
+                }
+            }
+        }
      
 stage('Build') {
              steps{
